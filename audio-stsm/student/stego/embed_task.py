@@ -1,19 +1,6 @@
 #!/usr/bin/env python3
-import os
 import subprocess
 import sys
-
-
-def mark(token):
-    result = os.path.expanduser("~/.local/result/stsm_check.txt")
-    os.makedirs(os.path.dirname(result), exist_ok=True)
-    existing = ""
-    if os.path.exists(result):
-        with open(result, "r", encoding="utf-8") as handle:
-            existing = handle.read()
-    if token not in existing:
-        with open(result, "a", encoding="utf-8") as handle:
-            handle.write(token + "\n")
 
 
 def get_inputs():
@@ -31,8 +18,6 @@ def get_inputs():
 
 def main():
     input_audio, message_file, output_audio = get_inputs()
-    if os.path.exists(message_file) and os.path.getsize(message_file) > 0:
-        mark("PASS_MESSAGE_CREATED")
     cmd = [
         "python3",
         "stsm_stego.py",

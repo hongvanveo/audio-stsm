@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import argparse
 import math
+import os
 import wave
 from array import array
 
@@ -29,8 +30,14 @@ def main():
     snr = float("inf") if noise == 0 else 10 * math.log10(signal / noise)
     print(f"changed_samples={changed}")
     print(f"snr_db={snr:.2f}")
+    marker = ".analysis_done"
+    if changed > 0:
+        with open(marker, "w", encoding="utf-8") as handle:
+            handle.write(f"changed_samples={changed}\n")
+            handle.write(f"snr_db={snr:.2f}\n")
+    elif os.path.exists(marker):
+        os.remove(marker)
 
 
 if __name__ == "__main__":
     main()
-

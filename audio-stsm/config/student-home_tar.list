@@ -2,4 +2,5 @@ stego/stsm_stego.py
 stego/embed_task.py
 stego/generate_cover.py
 stego/analyze_audio.py
+stego/refresh_status.py
 stego/samples/message.txt

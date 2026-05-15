@@ -128,8 +128,6 @@ def embed(args):
             stego[base] = adjust(stego[base], 1)
 
     write_wav(args.out, params, stego)
-    mark("PASS_STEGO_CREATED")
-    mark("PASS_SAMPLES_MODIFIED")
     print(f"capacity_groups={capacity}")
     print(f"embedded_hamming_bits={len(bits)}")
     print(f"wrote={args.out}")
