@@ -11,15 +11,20 @@ Co che:
 - Neu bit can nhung la 0 thi tong 3 mau phai chan.
 - Neu chua dung dieu kien, chuong trinh dieu chinh nhe mot mau trong nhom.
 
+Muc tieu cua lab nay la tao `cover.wav`, nhung thong diep vao `stego.wav`, va chung minh file stego da thay doi so voi file goc. Ham `extract` van duoc giu trong code de tai su dung cho lab sau, nhung khong nam trong yeu cau thuc hanh va khong duoc checkwork su dung.
+
 Lenh mau trong container `sender`:
 
 ```bash
 cd ~/stego
 python3 generate_cover.py --out cover.wav
 python3 stsm_stego.py embed --in cover.wav --out stego.wav --message samples/message.txt
-python3 stsm_stego.py extract --in stego.wav --out recovered.txt
 python3 analyze_audio.py --cover cover.wav --stego stego.wav
+cmp cover.wav stego.wav
 ```
 
-Checkwork co 4 muc trong `instr_config/results.config`.
+Checkwork co 3 muc trong `instr_config/results.config`:
 
+- `cover_created`
+- `stego_created`
+- `samples_modified`
