@@ -2,8 +2,9 @@ stego/cover.wav
 stego/stego.wav
 stego/recovered.txt
 stego/stsm_stego.py
+stego/embed_task.py
 stego/generate_cover.py
 stego/analyze_audio.py
+stego/message.txt
 stego/samples/message.txt
 stego/.local/result/stsm_check.txt
-

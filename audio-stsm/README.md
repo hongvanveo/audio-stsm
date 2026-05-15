@@ -1,6 +1,6 @@
 # audio-stsm
 
-Labtainer lab ve giau tin trong am thanh bang phuong phap dieu chinh ti le thoi gian STSM.
+Lab nay yeu cau sinh vien thuc hien nhung tin vao audio bang phuong phap STSM sau khi tu tao thong diep va sua mot doan code Python mau.
 
 Co che:
 
@@ -9,21 +9,26 @@ Co che:
 - Moi bit sau ma hoa duoc nhung vao 3 mau am thanh.
 - Neu bit can nhung la 1 thi tong 3 mau phai le.
 - Neu bit can nhung la 0 thi tong 3 mau phai chan.
-- Neu chua dung dieu kien, chuong trinh dieu chinh nhe mot mau trong nhom.
 
-Muc tieu cua lab nay la tao `cover.wav`, nhung thong diep vao `stego.wav`, va chung minh file stego da thay doi so voi file goc. Ham `extract` van duoc giu trong code de tai su dung cho lab sau, nhung khong nam trong yeu cau thuc hanh va khong duoc checkwork su dung.
+Cau truc lab:
 
-Lenh mau trong container `sender`:
+- Lab chi dung 1 container duy nhat ten `audio-stsm`.
+- Sinh vien thao tac trong thu muc `~/stego`.
+- File `embed_task.py` la file can sua de dien ten file audio va ten file thong diep.
+
+Luong thuc hanh:
 
 ```bash
 cd ~/stego
 python3 generate_cover.py --out cover.wav
-python3 stsm_stego.py embed --in cover.wav --out stego.wav --message samples/message.txt
+nano message.txt
+nano embed_task.py
+python3 embed_task.py
 python3 analyze_audio.py --cover cover.wav --stego stego.wav
 cmp cover.wav stego.wav
 ```
 
-Checkwork co 3 muc trong `instr_config/results.config`:
+Checkwork co 3 muc:
 
 - `cover_created`
 - `stego_created`
