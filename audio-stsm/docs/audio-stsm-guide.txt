@@ -1,0 +1,15 @@
+Lab: audio-stsm
+
+Noi dung:
+- Tao file message.txt.
+- Tao cover.wav.
+- Chinh sua code nhung tin neu bai lab yeu cau.
+- Chay nhung tin de tao stego.wav.
+- Phan tich su khac nhau giua cover.wav va stego.wav.
+- Chay checkwork de kiem tra ket qua.
+
+Tep can quan tam:
+- ~/stego/message.txt
+- ~/stego/cover.wav
+- ~/stego/stego.wav
+- ~/stego/embed_task.py

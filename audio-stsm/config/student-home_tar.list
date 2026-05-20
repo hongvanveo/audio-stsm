@@ -4,3 +4,7 @@ stego/generate_cover.py
 stego/analyze_audio.py
 stego/refresh_status.py
 stego/samples/message.txt
+stego/message.txt
+stego/cover.wav
+stego/stego.wav
+stego/.analysis_done
